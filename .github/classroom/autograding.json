@@ -209,6 +209,146 @@
       "comparison": "exact",
       "timeout": 10,
       "points": 2
+    },
+    {
+      "name": "Bulma class: is-active (1)",
+      "setup": "SHELL=/bin/bash",
+      "run": "NIA=$(cat index.html | grep -o '.*class=\"is-active\".*' | wc -l) && if [ \"$NIA\" -eq \"1\" ]; then echo \"TRUE\"; fi",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "Bulma class: is-capitalized (1)",
+      "setup": "SHELL=/bin/bash",
+      "run": "NIC=$(cat index.html | grep -o '.*class=\"is-capitalized\".*' | wc -l) && if [ \"$NIC\" -eq \"1\" ]; then echo \"TRUE\"; fi",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "Bulma class: label (5)",
+      "setup": "SHELL=/bin/bash",
+      "run": "NLBL=$(cat index.html | grep -o '.*class=\"label\".*' | wc -l) && if [ \"$NLBL\" -eq \"6\" ]; then echo \"TRUE\"; fi",
+      "input": "",
+      "output": "TRUE",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "Bulma class: notification is-danger (1)",
+      "setup": "SHELL=/bin/bash",
+      "run": "NNID=$(cat index.html | grep -o '.*class=\"notification is-danger\".*' | wc -l) && if [ \"$NNID\" -eq \"1\" ]; then echo \"TRUE\"; fi",
+      "input": "",
+      "output": "TRUE",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "Bulma class: section (3)",
+      "setup": "SHELL=/bin/bash",
+      "run": "NSECT=$(cat index.html | grep -o '.*class=\"section\".*' | wc -l) && if [ \"$NSECT\" -eq \"3\" ]; then echo \"TRUE\"; fi",
+      "input": "",
+      "output": "TRUE",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "Bulma class: section has-background-white (2)",
+      "setup": "SHELL=/bin/bash",
+      "run": "NSHBW=$(cat index.html | grep -o '.*class=\"section has-background-white\".*' | wc -l) && if [ \"$NSHBW\" -eq \"2\" ]; then echo \"TRUE\"; fi",
+      "input": "",
+      "output": "TRUE",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "Bulma class: select (1)",
+      "setup": "SHELL=/bin/bash",
+      "run": "NSEL=$(cat index.html | grep -o '.*class=\"select\".*' | wc -l) && if [ \"$NSEL\" -eq \"1\" ]; then echo \"TRUE\"; fi",
+      "input": "",
+      "output": "TRUE",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "Bulma class: subtitle (1)",
+      "setup": "SHELL=/bin/bash",
+      "run": "NSBTL=$(cat index.html | grep -o '.*class=\"subtitle\".*' | wc -l) && if [ \"$NSBTL\" -eq \"1\" ]; then echo \"TRUE\"; fi",
+      "input": "",
+      "output": "TRUE",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "Bulma class: subtitle has-text-grey (3)",
+      "setup": "SHELL=/bin/bash",
+      "run": "NSHTG=$(cat index.html | grep -o '.*class=\"subtitle has-text-grey\".*' | wc -l) && if [ \"$NSHTG\" -eq \"3\" ]; then echo \"TRUE\"; fi",
+      "input": "",
+      "output": "TRUE",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "Bulma class: subtitle has-text-grey has-text-weight-bold (1)",
+      "setup": "SHELL=/bin/bash",
+      "run": "NSHTGHTWB=$(cat index.html | grep -o '.*class=\"subtitle has-text-grey has-text-weight-bold\".*' | wc -l) && if [ \"$NSHTGHTWB\" -eq \"1\" ]; then echo \"TRUE\"; fi",
+      "input": "",
+      "output": "TRUE",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "Bulma class: subtitle has-text-grey has-text-weight-light (1)",
+      "setup": "",
+      "run": "NSHTGHTWL=$(cat index.html | grep -o '.*class=\"subtitle has-text-grey has-text-weight-light\".*' | wc -l) && if [ \"$NSHTGHTWL\" -eq \"1\" ]; then echo \"TRUE\"; fi",
+      "input": "",
+      "output": "TRUE",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "Bulma class: subtitle has-text-grey has-text-weight-normal (1)",
+      "setup": "SHELL=/bin/bash",
+      "run": "NSHTGHTWN=$(cat index.html | grep -o '.*class=\"subtitle has-text-grey has-text-weight-normal\".*' | wc -l) && if [ \"$NSHTGHTWN\" -eq \"1\" ]; then echo \"TRUE\"; fi",
+      "input": "",
+      "output": "TRUE",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "Bulma class: subtitle has-text-grey is-italic (1)",
+      "setup": "SHELL=/bin/bash",
+      "run": "NSHTGII=$(cat index.html | grep -o '.*class=\"subtitle has-text-grey is-italic\".*' | wc -l) && if [ \"$NSHTGII\" -eq \"1\" ]; then echo \"TRUE\"; fi",
+      "input": "",
+      "output": "TRUE",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "Bulma class: tabs is-medium is-centered (1)",
+      "setup": "SHELL=/bin/bash",
+      "run": "NTIMIS=$(cat index.html | grep -o '.*class=\"tabs is-medium is-centered\".*' | wc -l) && if [ \"$NTIMIS\" -eq \"1\" ]; then echo \"TRUE\"; fi",
+      "input": "",
+      "output": "TRUE",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 2
     }
   ]
 }
