@@ -93,7 +93,7 @@
     {
       "name": "Bulma class: columns (2)",
       "setup": "SHELL=/bin/bash",
-      "run": " NCOLS=$(cat index.html | grep -o '.*class=\"columns\".*' | wc -l) && if [ \"$NCOLS\" -eq \"2\" ]; then echo \"TRUE\"; fi",
+      "run": "NCOLS=$(cat index.html | grep -o '.*class=\"columns\".*' | wc -l) && if [ \"$NCOLS\" -eq \"2\" ]; then echo \"TRUE\"; fi",
       "input": "",
       "output": "TRUE",
       "comparison": "exact",
