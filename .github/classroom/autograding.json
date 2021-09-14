@@ -43,7 +43,7 @@
     {
       "name": "You linked Bulma in index.html",
       "setup": "SHELL=/bin/bash",
-      "run": "NBUL=$(cat index.html | egrep -o '.*href=\"(./)?node_modules/bulma/css/bulma.css\".*' | wc -l) && if [ \"$NBUL\" -eq \"1\" ]; then echo \"TRUE\"; fi",
+      "run": "cat index.html | egrep -o '.*href=\"(./)?node_modules/bulma/css/bulma.css\".*' && NBUL=$(cat index.html | egrep -o '.*href=\"(./)?node_modules/bulma/css/bulma.css\".*' | wc -l) && if [ \"$NBUL\" -eq \"1\" ]; then echo \"TRUE\"; fi",
       "input": "",
       "output": "TRUE",
       "comparison": "exact",
@@ -83,7 +83,7 @@
     {
       "name": "Bulma class: column",
       "setup": "SHELL=/bin/bash",
-      "run": "NCOL=$(cat index.html | grep -o '.*class=\"column\".*' | wc -l) && if [ \"$NCOL\" -eq \"1\"; then echo \"TRUE\"; fi",
+      "run": "NCOL=$(cat index.html | grep -o '.*class=\"column\".*' | wc -l) && if [ \"$NCOL\" -eq \"8\" ]; then echo \"TRUE\"; fi",
       "input": "",
       "output": "TRUE",
       "comparison": "exact",
