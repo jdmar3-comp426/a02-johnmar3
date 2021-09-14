@@ -33,7 +33,7 @@
     {
       "name": "You did not edit the custom CSS file",
       "setup": "",
-      "run": "cat custom_styles.css",
+      "run": "cat custom_style.css",
       "input": "",
       "output": "/*\r\nThis css file is here to add functionality and style elements that\r\nwere needed. You must not edit this file or use it in any way.\r\n */\r\n\r\nhtml, body{\r\n    height: 100%;\r\n    font-size: 1.1em;\r\n    background-color: #fafafa;\r\n}\r\nhr{\r\n    background-color: #e6e6e4;\r\n}\r\n\r\n.title{\r\n    font-size: 2.8em !important;\r\n}\r\n.subtitle{\r\n}\r\n.justify-center .column{\r\n    display: flex !important;\r\n    justify-content: center !important;\r\n}\r\n\r\n.is-family-secondary{\r\n    font-family: 'Shrikhand', cursive !important;\r\n    font-size: 6em !important;\r\n    font-weight: lighter !important;\r\n}\r\nimg {\r\n    height: 300px !important;\r\n    width: 300px !important;\r\n    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);\r\n    transition: all 0.3s cubic-bezier(.25, .8, .25, 1);\r\n    min-width: 300px;\r\n    /*margin: .3em;*/\r\n}\r\n\r\nimg:hover {\r\n    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);\r\n    transform: scale(1.05);\r\n}",
       "comparison": "included",
@@ -42,10 +42,10 @@
     },
     {
       "name": "You linked Bulma in index.html",
-      "setup": "",
-      "run": "cat index.html",
+      "setup": "SHELL=/bin/bash",
+      "run": "NBUL=$(cat index.html | egrep -o '.*href=\"(./)?node_modules/bulma/css/bulma.css\".*' | wc -l) && if [ \"$NBUL\" -eq \"1\" ]; then echo \"TRUE\"; fi",
       "input": "",
-      "output": "<link rel=\"stylesheet\" href=\"node_modules/bulma/css/bulma.css\" />",
+      "output": "TRUE",
       "comparison": "exact",
       "timeout": 10,
       "points": 5
