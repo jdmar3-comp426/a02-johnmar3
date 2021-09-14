@@ -43,7 +43,7 @@
     {
       "name": "You linked Bulma in index.html",
       "setup": "SHELL=/bin/bash",
-      "run": "cat index.html | egrep -o '.*href=\"(./)?node_modules/bulma/css/bulma.css\".*' && NBUL=$(cat index.html | egrep -o '.*href=\"(./)?node_modules/bulma/css/bulma.css\".*' | wc -l) && if [ \"$NBUL\" -eq \"1\" ]; then echo \"TRUE\"; fi",
+      "run": "NBUL=$(cat index.html | egrep -o '.*href=\"(./)?node_modules/bulma/css/bulma.css\".*' | wc -l) && if [ \"$NBUL\" -eq \"1\" ]; then echo \"TRUE\"; fi",
       "input": "",
       "output": "TRUE",
       "comparison": "exact",
