@@ -61,7 +61,7 @@
       "points": 5
     },
     {
-      "name": "Bulma class: button is-dark ",
+      "name": "Bulma class: button is-dark (2)",
       "setup": "SHELL=/bin/bash",
       "run": "NBID=$(cat index.html | grep -o '.*class=\"button is-dark\".*' | wc -l) && if [ \"$NBID\" -eq \"2\" ]; then echo \"TRUE\"; fi",
       "input": "",
@@ -71,7 +71,7 @@
       "points": 2
     },
     {
-      "name": "Bulma class: checkbox",
+      "name": "Bulma class: checkbox (1)",
       "setup": "SHELL=/bin/bash",
       "run": "NCB=$(cat index.html | grep -o '.*class=\"checkbox\".*' | wc -l) && if [ \"$NCB\" -eq \"1\" ]; then echo \"TRUE\"; fi",
       "input": "",
@@ -81,9 +81,59 @@
       "points": 2
     },
     {
-      "name": "Bulma class: column",
+      "name": "Bulma class: column (8)",
       "setup": "SHELL=/bin/bash",
       "run": "NCOL=$(cat index.html | grep -o '.*class=\"column\".*' | wc -l) && if [ \"$NCOL\" -eq \"8\" ]; then echo \"TRUE\"; fi",
+      "input": "",
+      "output": "TRUE",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "Bulma class: columns (2)",
+      "setup": "SHELL=/bin/bash",
+      "run": " NCOLS=$(cat index.html | grep -o '.*class=\"columns\".*' | wc -l) && if [ \"$NCOLS\" -eq \"2\" ]; then echo \"TRUE\"; fi",
+      "input": "",
+      "output": "TRUE",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "Bulma class: columns is-multiline justify-center (1)",
+      "setup": "SHELL=/bin/bash",
+      "run": "NCIMJC=$(cat index.html | grep -o '.*class=\"columns is-multiline justify-center\".*' | wc -l) && if [ \"$NCIMJC\" -eq \"1\" ]; then echo \"TRUE\"; fi",
+      "input": "",
+      "output": "TRUE",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "Bulma class: container (6)",
+      "setup": "SHELL=/bin/bash",
+      "run": "NCNTR=$(cat index.html | grep -o '.*class=\"container\".*' | wc -l) && if [ \"$NCNTR\" -eq \"6\" ]; then echo \"TRUE\"; fi",
+      "input": "",
+      "output": "TRUE",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "Bulma class: content (3)",
+      "setup": "SHELL=/bin/bash",
+      "run": "NCONT=$(cat index.html | grep -o '.*class=\"content\".*' | wc -l) && if [ \"$NCONT\" -eq \"3\" ]; then echo \"TRUE\"; fi",
+      "input": "",
+      "output": "TRUE",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "Bulma class: content has-text-center (3)",
+      "setup": "SHELL=/bin/bash",
+      "run": "NCHTC=$(cat index.html | grep -o '.*class=\"content has-text-centered\".*' | wc -l) && if [ \"$NCHTC\" -eq \"2\" ]; then echo \"TRUE\"; fi",
       "input": "",
       "output": "TRUE",
       "comparison": "exact",
