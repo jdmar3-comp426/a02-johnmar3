@@ -343,12 +343,72 @@
     {
       "name": "Bulma class: tabs is-medium is-centered (1)",
       "setup": "SHELL=/bin/bash",
-      "run": "NTIMIS=$(cat index.html | grep -o '.*class=\"tabs is-medium is-centered\".*' | wc -l) && if [ \"$NTIMIS\" -eq \"1\" ]; then echo \"TRUE\"; fi",
+      "run": "NTIMIC=$(cat index.html | grep -o '.*class=\"tabs is-medium is-centered\".*' | wc -l) && if [ \"$NTIMIC\" -eq \"1\" ]; then echo \"TRUE\"; fi",
       "input": "",
       "output": "TRUE",
       "comparison": "exact",
       "timeout": 10,
       "points": 2
+    },
+    {
+      "name": "Bulma class: title (6)",
+      "setup": "SHELL=/bin/bash",
+      "run": "NTITL=$(cat index.html | grep -o '.*class=\"title\".*' | wc -l) && if [ \"$NTITL\" -eq \"6\" ]; then echo \"TRUE\"; fi",
+      "input": "",
+      "output": "TRUE",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "Bulma class: title has-text-info is-family-secondary (1)",
+      "setup": "SHELL=/bin/bash",
+      "run": "NTHTIIFS=$(cat index.html | grep -o '.*class=\"title has-text-info is-family-secondary\".*' | wc -l) && if [ \"$NTHTIIFS\" -eq \"1\" ]; then echo \"TRUE\"; fi",
+      "input": "",
+      "output": "TRUE",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "Bulma class: title has-text-weight-bold (1)",
+      "setup": "SHELL=/bin/bash",
+      "run": "NTHTWB=$(cat index.html | grep -o '.*class=\"title has-text-weight-bold\".*' | wc -l) && if [ \"$NTHTWB\" -eq \"1\" ]; then echo \"TRUE\"; fi",
+      "input": "",
+      "output": "TRUE",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "Bulma class: title has-text-weight-light (1)",
+      "setup": "SHELL=/bin/bash",
+      "run": "NTHTWL=$(cat index.html | grep -o '.*class=\"title has-text-weight-light\".*' | wc -l) && if [ \"$NTHTWL\" -eq \"1\" ]; then echo \"TRUE\"; fi",
+      "input": "",
+      "output": "TRUE",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "Bulma class: title has-text-weight-normal (1)",
+      "setup": "SHELL=/bin/bash",
+      "run": "NTHTWN=$(cat index.html | grep -o '.*class=\"title has-text-weight-normal\".*' | wc -l) && if [ \"$NTHTWN\" -eq \"1\" ]; then echo \"TRUE\"; fi",
+      "input": "",
+      "output": "TRUE",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "index.html parses as valid HTML",
+      "setup": "npm i -g html-validate",
+      "run": "html-validate index.html",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 5
     }
   ]
 }
